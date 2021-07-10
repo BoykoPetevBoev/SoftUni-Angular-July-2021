@@ -16,7 +16,6 @@
     "url": "https://github.com/BoykoPetevBoev/SoftUni-Angular-July-2021/issues"
   },
   "homepage": "https://github.com/BoykoPetevBoev/SoftUni-Angular-July-2021#readme",
-  "dependencies": {
-    "typescript": "^4.3.5"
-  }
+  "dependencies": {},
+  "devDependencies": {}
 }

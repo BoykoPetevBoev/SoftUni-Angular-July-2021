@@ -3,7 +3,7 @@ class Requests {
     uri: string;
     version: string;
     message: string;
-    response: string;
+    response: undefined;
     fulfilled: boolean;
 
     constructor(
