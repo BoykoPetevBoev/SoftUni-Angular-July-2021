@@ -2,7 +2,7 @@
 
 ## TypeScript 
 
-### TypeScript compiler
+### Compiler
 <table>
     <tr>
         <th>tsc</th>
@@ -29,7 +29,8 @@
         <td>Build one or more projects and their dependencies, if out of date</td>
     </tr>
 </table>
-### TypeScript config file
+
+### Config file
 <table>
     <tr>
         <th>tscconfig.json</th>
@@ -61,7 +62,7 @@
     </tr>
 </table>
 
-## TypeScript Types
+## Types
 
 ### Number Types
 In TypeScript, numbers are floating point values that have a type of number. You can assign any numeric values including decimals, hexadecimals, binary, and octal literals.
@@ -146,7 +147,7 @@ let person: [string, number] = ["Kunal", 2018, 21];
 // error
 let person: [string, number] = ["Kunal", 2018, true];
 ```
-### Type Aliases
+### Aliases Type
 We’ve been using object types and union types by writing them directly in type annotations. This is convenient, but it’s common to want to use the same type more than once and refer to it by a single name.
 ```
 type Point = {
@@ -191,7 +192,7 @@ const bear = getBear()
 bear.name
 bear.honey
 ```
-### Type Assertions
+### Assertions Type
 Sometimes you will have information about the type of a value that TypeScript can’t know about.
 For example, if you’re using document.getElementById, TypeScript only knows that this will return some kind of HTMLElement, but you might know that your page will always have an HTMLCanvasElement with a given ID.
 ```
@@ -199,9 +200,9 @@ const myCanvas = document.getElementById("main_canvas") as HTMLCanvasElement;
 const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
 ```
 
-
 ## Angular
-### Angular CLI
+
+### CLI
 <table>
     <tr>
         <th>ng</th>
@@ -231,5 +232,33 @@ const myCanvas = <HTMLCanvasElement>document.getElementById("main_canvas");
         <td>ng build (b)</td>
         <td>Compiles an Angular app into an output directory named dist/ at the given output path. Must be executed from within a workspace directory.</td>
     </tr>    
+</table>
+
+### Lifecycle event sequence
+<table>
+    <tr>
+        <th>Hook method</th>
+        <th>Purpose</th>
+    </tr>
+    <tr>
+        <td>ngOnChanges()</td>
+        <td>Respond when Angular sets or resets data-bound input properties. The method receives a SimpleChanges object of current and previous property values.</td>
+    </tr>   
+    <tr>
+        <td>ngOnInit()</td>
+        <td>Initialize the directive or component after Angular first displays the data-bound properties and sets the directive or component's input properties. </td>
+    </tr>   
+    <tr>
+        <td>ngOnDestroy()</td>
+        <td>Called immediately before Angular destroys the directive or component.</td>
+    </tr>   
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>   
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>   
 </table>
 
