@@ -1,0 +1,4 @@
+<ul *ngif="articles">
+    <app-article *ngFor="let a of articles" [article]="a" [articleDesc]="a.description">
+    </app-article>
+</ul>
