@@ -11,12 +11,13 @@ import { Article } from '../models/article.models';
 
 export class ArticlesComponent implements OnInit {
 
-  articles: Article[] = [];
+  articles: any = new ArticleData().getData();
 
-  // constructor() {
-  //   this.articles = [];
-  // }
-
+  constructor() {
+    this.articles = new ArticleData().getData();
+    console.log(this.articles);
+  }
+  
   ngOnInit(): void {
     this.articles = new ArticleData().getData();
   }

@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ArticleComponent } from './article/article.component';
 import { ArticlesComponent } from './articles/articles.component';
+import { Article } from './models/article.models';
 
 @NgModule({
   declarations: [

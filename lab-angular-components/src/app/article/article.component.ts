@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Article } from '../models/article.models';
 
 @Component({
   selector: 'app-article',
@@ -7,20 +6,42 @@ import { Article } from '../models/article.models';
   styleUrls: ['./article.component.scss']
 })
 
-export class ArticleComponent {  
-  
+export class ArticleComponent {
+
   private symbol: number = 250;
-
-  @Input() article: Article[] = [];
-  @Input() articleDesc: string = '';
-
+  @Input() article: any;
   descToShow: string;
+  articleDescLen: number;
+  showReadMoreBtn: boolean = true;
+  showHideBtn: boolean = false;
+  imageIsShown: boolean = false;
+  imageButtonTitle: string = "Show Image";
 
-  constructor () {
+  constructor() {
+    this.articleDescLen = 0;
     this.descToShow = '';
-    // this.article = article;
-    // this.articleDesc = articleDesc;
   }
 
+  readMore() {
+    this.articleDescLen += this.symbol;
+    if(this.articleDescLen >= this.article.description.length){
+      this.showHideBtn = true;
+      this.showReadMoreBtn = false;
+    } else {
+      this.descToShow = this.article.description.substr(0, this.articleDescLen);
+    }
+  }
+
+  toggleImage(): void {
+    this.imageIsShown = !this.imageIsShown;
+    this.imageButtonTitle === "Show Image" ? "Hide Image" : "Show Image";
+  }
+
+  hideDesc() { 
+    this.descToShow = '';
+    this.articleDescLen = 0;
+    this.showReadMoreBtn  = true;
+    this.showHideBtn = false;
+  }
 
 }
