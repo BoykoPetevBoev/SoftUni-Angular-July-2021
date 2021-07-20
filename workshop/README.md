@@ -1,11 +1,11 @@
 <table>
-    <th>
-        <td>HTTP Method</td>
-        <td>Description</td>
-        <td>Endpoint</td>
-        <td>Expect</td>
-        <td>Login Required</td>
-    </th>
+    <tr>
+        <th>HTTP Method</th>
+        <th>Description</th>
+        <th>Endpoint</th>
+        <th>Expect</th>
+        <th>Login Required</th>
+    </tr>
     <tr>
         <td>POST</td>
         <td>Signing up</td>
@@ -65,13 +65,6 @@
         <td>/themes/:themeId</td>
         <td></td>
         <td>Yes</td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
     </tr>
     <tr>
         <td>GET</td>
