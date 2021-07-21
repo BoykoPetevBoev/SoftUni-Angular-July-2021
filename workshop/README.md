@@ -1,3 +1,5 @@
+# REST-api for Angular course in SoftUni
+
 <table>
     <tr>
         <th>HTTP Method</th>
@@ -116,8 +118,6 @@ user is logged in</td>
         <td>Yes</td>
     </tr>
 </table>
-
-# REST-api for Angular course in SoftUni
 
 ## Getting started
 Let's make our first API request to the REST-api!
